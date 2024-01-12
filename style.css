@@ -14,13 +14,14 @@ input {
   border-radius: 20px;
   border: none;
   background-color: lightgray;
+  min-height: 30px;
 }
 
 .container {
   display: grid;
   grid-template-columns: minmax(150px, 1fr) minmax(500px, 5fr);
   grid-template-rows: repeat(4, minmax(150px, 1fr));
-
+  height: 100%;
 }
 
 .sidebar {
@@ -28,16 +29,15 @@ input {
   grid-column: 1 / 1;
   grid-row: 1 / 5;
   color: white;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   padding: 20px;
+  height: 100vh;
 }
 
 .sidebar h1 {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
   padding-left: 5%;
 }
 
